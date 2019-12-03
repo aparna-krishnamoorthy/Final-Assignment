@@ -1,0 +1,7 @@
+results
+
+	Chi-squared test for given probabilities
+
+data:  birdTable
+X-squared = 14.302, df = 2, p-value = 0.0007841
+
