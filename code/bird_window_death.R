@@ -15,9 +15,13 @@ birdTable <- sort(table(birdData$angleDuringBirdCrash), decreasing = TRUE)
 #organizes table by frequency
 data.frame(Frequency = birdTable)
 
+#remember to commit the x axis label
 #exporting pdf to the results folder
 pdf("../results/birdTableBarPlot.pdf")
-barplot(birdTable, ylab = "Frequency", cex.names = 0.5, las = 2)
+barplot(birdTable, ylab = "Number of Deaths", xlab = "Angle of Window", cex.names = .5, las = 2, 
+        main = "Frequency of Deaths at Each Window Angle",
+        #colors the graph so there is a gradient
+        col = c("#38CDFF" ,"#8DE2FF", "#E2F7FF"))
 dev.off()
 
 #chi-squared test
